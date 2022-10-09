@@ -9,8 +9,8 @@
         }
     ],
     "require": {
-        "php": "^7.3|^8.0",
-        "laravel/framework": "8.*",
+        "php": "^8.0",
+        "laravel/framework": "9.*",
         "guzzlehttp/guzzle": "7.*"
     },
     "require-dev": {
