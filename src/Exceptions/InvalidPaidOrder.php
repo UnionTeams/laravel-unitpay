@@ -1,6 +1,6 @@
 <?php
 
-namespace Maksa988\UnitPay\Exceptions;
+namespace Dmitriidigital\UnitPay\Exceptions;
 
 use Throwable;
 

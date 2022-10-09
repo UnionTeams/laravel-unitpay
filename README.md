@@ -1,11 +1,11 @@
 # Laravel payment processor package for UnitPay gateway
 
-[![Latest Stable Version](https://poser.pugx.org/maksa988/laravel-unitpay/v/stable)](https://packagist.org/packages/maksa988/laravel-unitpay)
-[![Build Status](https://travis-ci.org/maksa988/laravel-unitpay.svg?branch=master)](https://travis-ci.org/maksa988/laravel-unitpay)
+[![Latest Stable Version](https://poser.pugx.org/dmitriidigital/laravel-unitpay/v/stable)](https://packagist.org/packages/dmitriidigital/laravel-unitpay)
+[![Build Status](https://travis-ci.org/dmitriidigital/laravel-unitpay.svg?branch=master)](https://travis-ci.org/dmitriidigital/laravel-unitpay)
 [![StyleCI](https://github.styleci.io/repos/165841601/shield?branch=master)](https://github.styleci.io/repos/165841601)
-[![CodeFactor](https://www.codefactor.io/repository/github/maksa988/laravel-unitpay/badge)](https://www.codefactor.io/repository/github/maksa988/laravel-unitpay)
-[![Total Downloads](https://img.shields.io/packagist/dt/maksa988/laravel-unitpay.svg?style=flat-square)](https://packagist.org/packages/maksa988/laravel-unitpay)
-[![License](https://poser.pugx.org/maksa988/laravel-unitpay/license)](https://packagist.org/packages/maksa988/laravel-unitpay)
+[![CodeFactor](https://www.codefactor.io/repository/github/dmitriidigital/laravel-unitpay/badge)](https://www.codefactor.io/repository/github/dmitriidigital/laravel-unitpay)
+[![Total Downloads](https://img.shields.io/packagist/dt/dmitriidigital/laravel-unitpay.svg?style=flat-square)](https://packagist.org/packages/dmitriidigital/laravel-unitpay)
+[![License](https://poser.pugx.org/dmitriidigital/laravel-unitpay/license)](https://packagist.org/packages/dmitriidigital/laravel-unitpay)
 
 Accept payments via UnitPay ([unitpay.ru](https://unitpay.ru/)) using this Laravel framework package ([Laravel](https://laravel.com)).
 
@@ -13,35 +13,35 @@ Accept payments via UnitPay ([unitpay.ru](https://unitpay.ru/)) using this Larav
 
 #### Laravel >= 8.*, PHP >= 7.3
 
-> To use the package for Laravel 7.* use the [3.x](https://github.com/maksa988/laravel-unitpay/tree/3.x) branch
+> To use the package for Laravel 7.* use the [3.x](https://github.com/dmitriidigital/laravel-unitpay/tree/3.x) branch
 
-> To use the package for Laravel 6.* use the [2.x](https://github.com/maksa988/laravel-unitpay/tree/2.x) branch
+> To use the package for Laravel 6.* use the [2.x](https://github.com/dmitriidigital/laravel-unitpay/tree/2.x) branch
 
-> To use the package for Laravel 5.* use the [1.x](https://github.com/maksa988/laravel-unitpay/tree/1.x) branch
+> To use the package for Laravel 5.* use the [1.x](https://github.com/dmitriidigital/laravel-unitpay/tree/1.x) branch
 
 ## Installation
 
 Require this package with composer.
 
 ``` bash
-composer require "maksa988/laravel-unitpay"
+composer require "dmitriidigital/laravel-unitpay"
 ```
 
 If you don't use auto-discovery, add the ServiceProvider to the providers array in `config/app.php`
 
 ```php
-Maksa988\UnitPay\UnitPayServiceProvider::class,
+Dmitriidigital\UnitPay\UnitPayServiceProvider::class,
 ```
 
 Add the `UnitPay` facade to your facades array:
 
 ```php
-'UnitPay' => Maksa988\UnitPay\Facades\UnitPay::class,
+'UnitPay' => Dmitriidigital\UnitPay\Facades\UnitPay::class,
 ```
 
 Copy the package config to your local config with the publish command:
 ``` bash
-php artisan vendor:publish --provider="Maksa988\UnitPay\UnitPayServiceProvider"
+php artisan vendor:publish --provider="Dmitriidigital\UnitPay\UnitPayServiceProvider"
 ```
 
 ## Configuration
@@ -180,11 +180,11 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security
 
-If you discover any security related issues, please send me an email at maksa988ua@gmail.com instead of using the issue tracker.
+If you discover any security related issues, please send me an email at dmitriidigital@gmail.com instead of using the issue tracker.
 
 ## Credits
 
-- [Maksa988](https://github.com/maksa988)
+- [Dmitriidigital](https://github.com/dmitriidigital)
 - [All Contributors](../../contributors)
 
 ## License

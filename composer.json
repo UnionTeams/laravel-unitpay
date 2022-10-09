@@ -1,11 +1,11 @@
 {
-    "name": "maksa988/laravel-unitpay",
+    "name": "dmitriidigital/laravel-unitpay",
     "description": "UnitPay payments for Laravel",
     "license": "MIT",
     "authors": [
         {
-            "name": "maksa988",
-            "email": "maksa988ua@gmail.com"
+            "name": "dmitriidigital",
+            "email": "dmitriidigital@gmail.com"
         }
     ],
     "require": {
@@ -19,13 +19,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Maksa988\\UnitPay\\Facades\\": "src/Facades",
-            "Maksa988\\UnitPay\\": "src"
+            "Dmitriidigital\\UnitPay\\Facades\\": "src/Facades",
+            "Dmitriidigital\\UnitPay\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Maksa988\\UnitPay\\Test\\": "tests/"
+            "Dmitriidigital\\UnitPay\\Test\\": "tests/"
         }
     },
     "config": {
@@ -34,10 +34,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Maksa988\\UnitPay\\UnitPayServiceProvider"
+                "Dmitriidigital\\UnitPay\\UnitPayServiceProvider"
             ],
             "aliases": {
-                "UnitPay": "Maksa988\\UnitPay\\Facades\\UnitPay"
+                "UnitPay": "Dmitriidigital\\UnitPay\\Facades\\UnitPay"
             }
         }
     }

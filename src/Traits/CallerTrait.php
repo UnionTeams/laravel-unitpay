@@ -1,11 +1,11 @@
 <?php
 
-namespace Maksa988\UnitPay\Traits;
+namespace Dmitriidigital\UnitPay\Traits;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use Maksa988\UnitPay\Exceptions\InvalidPaidOrder;
-use Maksa988\UnitPay\Exceptions\InvalidSearchOrder;
+use Dmitriidigital\UnitPay\Exceptions\InvalidPaidOrder;
+use Dmitriidigital\UnitPay\Exceptions\InvalidSearchOrder;
 
 trait CallerTrait
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Maksa988\UnitPay;
+namespace Dmitriidigital\UnitPay;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Maksa988\UnitPay\Traits\CallerTrait;
-use Maksa988\UnitPay\Traits\ValidateTrait;
+use Dmitriidigital\UnitPay\Traits\CallerTrait;
+use Dmitriidigital\UnitPay\Traits\ValidateTrait;
 
 class UnitPay
 {
@@ -30,7 +30,7 @@ class UnitPay
      * @param null $currency
      * @return string
      */
-    public function getPayUrl($amount, $order_id, $email, $desc = null, $currency = null)
+    public function getPayUrl($amount, $order_id, $email, $desc = null, $currency = null, $locale = null)
     {
         // Array of url query
         $query = [];
@@ -41,6 +41,9 @@ class UnitPay
         // Amount of payment
         $query['sum'] = $amount;
 
+        // Form locale
+        $query['locale'] = $locale;
+
         // Order id
         $query['account'] = $order_id;
 
@@ -48,7 +51,7 @@ class UnitPay
         $query['customerEmail'] = $email;
 
         // Locale for payment form
-        $query['locale'] = config('unitpay.locale', 'ru');
+        $query['locale'] = is_null($locale) ? config('unitpay.locale', 'ru') : $locale;
 
         // Payment description
         if (! is_null($desc)) {

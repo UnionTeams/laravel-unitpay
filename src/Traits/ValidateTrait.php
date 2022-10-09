@@ -1,6 +1,6 @@
 <?php
 
-namespace Maksa988\UnitPay\Traits;
+namespace Dmitriidigital\UnitPay\Traits;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -52,8 +52,13 @@ trait ValidateTrait
      */
     public function validateOrderFromHandle(Request $request)
     {
-        return $this->AllowIP($request->ip())
-                    && $this->validate($request)
-                    && $this->validateSignature($request);
+        if(config('app.debug') === true) {
+            return $this->AllowIP($request->ip())
+                && $this->validate($request)
+                && $this->validateSignature($request);
+        } else {
+            return $this->validate($request)
+                && $this->validateSignature($request);
+        }
     }
 }
