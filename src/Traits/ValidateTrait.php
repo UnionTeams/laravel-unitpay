@@ -52,13 +52,13 @@ trait ValidateTrait
      */
     public function validateOrderFromHandle(Request $request)
     {
-        if(config('app.debug') === true) {
+        if(config('app.debug') === false) {
             return $this->AllowIP($request->ip())
                 && $this->validate($request)
                 && $this->validateSignature($request);
-        } else {
-            return $this->validate($request)
-                && $this->validateSignature($request);
         }
+
+        return $this->validate($request)
+            && $this->validateSignature($request);
     }
 }
