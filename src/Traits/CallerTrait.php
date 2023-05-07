@@ -23,7 +23,7 @@ trait CallerTrait
 
         return App::call(config('unitpay.searchOrder'), [
             'order_id' => $request->input('params.account'),
-            'paymentType' => $request->input('params.paymentType'),
+            'payment_type' => $request->input('params.paymentType'),
         ]);
     }
 
