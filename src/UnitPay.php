@@ -140,10 +140,9 @@ class UnitPay
         }
 
         // Search and get order
-        $order = $this->callSearchOrder($request);
-
-        if (! $order) {
-            return $this->responseError('searchOrder');
+        $searchOrderResult = $this->callSearchOrder($request);
+        if (!$searchOrderResult['order']) {
+            return $this->responseError($searchOrderResult['message']);
         }
 
         // Return success response for check and error methods
@@ -157,13 +156,13 @@ class UnitPay
         }
 
         // If order already paid return success
-        if (Str::lower($order['_orderStatus']) === 'paid') {
+        if (Str::lower($searchOrderResult['order']['_orderStatus']) === 'paid') {
             return $this->responseOK('OK');
         }
 
         // PaidOrder - update order info
         // if return false then return error
-        if (! $this->callPaidOrder($request, $order)) {
+        if (! $this->callPaidOrder($request, $searchOrderResult['order'])) {
             return $this->responseError('paidOrder');
         }
 
