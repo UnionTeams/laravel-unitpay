@@ -13,6 +13,9 @@ trait ValidateTrait
      */
     public function validate(Request $request)
     {
+
+        dd($request->all());
+
         $validator = Validator::make($request->all(), [
             'method' => 'required|in:check,pay,error',
             'params.account' => 'required',
