@@ -13,9 +13,6 @@ trait ValidateTrait
      */
     public function validate(Request $request)
     {
-
-        dd($request->all());
-
         $validator = Validator::make($request->all(), [
             'method' => 'required|in:check,pay,error',
             'params.account' => 'required',
@@ -56,6 +53,23 @@ trait ValidateTrait
     public function validateOrderFromHandle(Request $request)
     {
         if(config('app.debug') === false) {
+
+            $valid = collect();
+
+            if($this->AllowIP($request->ip())) {
+                $valid->push("IP valid");
+            }
+
+            if($this->validate($request)) {
+                $valid->push("Valid properties!");
+            }
+
+            if($this->validateSignature($request)) {
+                $valid->push("Valid signature!");
+            }
+
+            dd($valid);
+
             return $this->AllowIP($request->ip())
                 && $this->validate($request)
                 && $this->validateSignature($request);
