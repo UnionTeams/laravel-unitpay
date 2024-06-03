@@ -53,9 +53,6 @@ trait ValidateTrait
     public function validateOrderFromHandle(Request $request)
     {
         if(config('app.debug') === false) {
-
-            return response()->json([$request->ip(), config('unitpay.allowed_ips')]);
-
             return $this->AllowIP($request->ip())
                 && $this->validate($request)
                 && $this->validateSignature($request);
