@@ -141,8 +141,8 @@ class UnitPay
 
         // Search and get order
         $searchOrderResult = $this->callSearchOrder($request);
-        if (!$searchOrderResult['order']) {
-            return $this->responseError($searchOrderResult['message']);
+        if (! $searchOrderResult) {
+            return $this->responseError('searchOrder');
         }
 
         // Return success response for check and error methods
