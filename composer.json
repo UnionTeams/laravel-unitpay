@@ -1,11 +1,11 @@
 {
-    "name": "dmitriidigital/laravel-unitpay",
+    "name": "unionteams/laravel-unitpay",
     "description": "UnitPay payments for Laravel",
     "license": "MIT",
     "authors": [
         {
-            "name": "dmitriidigital",
-            "email": "dmitriidigital@gmail.com"
+            "name": "UnionTeams",
+            "email": "unionteams@gmail.com"
         }
     ],
     "require": {
@@ -19,13 +19,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Dmitriidigital\\UnitPay\\Facades\\": "src/Facades",
-            "Dmitriidigital\\UnitPay\\": "src"
+            "UnionTeams\\UnitPay\\Facades\\": "src/Facades",
+            "UnionTeams\\UnitPay\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Dmitriidigital\\UnitPay\\Test\\": "tests/"
+            "UnionTeams\\UnitPay\\Test\\": "tests/"
         }
     },
     "config": {
@@ -34,10 +34,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Dmitriidigital\\UnitPay\\UnitPayServiceProvider"
+                "UnionTeams\\UnitPay\\UnitPayServiceProvider"
             ],
             "aliases": {
-                "UnitPay": "Dmitriidigital\\UnitPay\\Facades\\UnitPay"
+                "UnitPay": "UnionTeams\\UnitPay\\Facades\\UnitPay"
             }
         }
     }

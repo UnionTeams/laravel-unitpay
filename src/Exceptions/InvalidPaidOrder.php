@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmitriidigital\UnitPay\Exceptions;
+namespace UnionTeams\UnitPay\Exceptions;
 
 use Throwable;
 

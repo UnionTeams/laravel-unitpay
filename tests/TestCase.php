@@ -1,9 +1,9 @@
 <?php
 
-namespace Dmitriidigital\UnitPay\Test;
+namespace UnionTeams\UnitPay\Test;
 
-use Dmitriidigital\UnitPay\UnitPay;
-use Dmitriidigital\UnitPay\UnitPayServiceProvider;
+use UnionTeams\UnitPay\UnitPay;
+use UnionTeams\UnitPay\UnitPayServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra

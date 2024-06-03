@@ -1,11 +1,11 @@
 <?php
 
-namespace Dmitriidigital\UnitPay;
+namespace UnionTeams\UnitPay;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-use Dmitriidigital\UnitPay\Traits\CallerTrait;
-use Dmitriidigital\UnitPay\Traits\ValidateTrait;
+use UnionTeams\UnitPay\Traits\CallerTrait;
+use UnionTeams\UnitPay\Traits\ValidateTrait;
 
 class UnitPay
 {

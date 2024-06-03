@@ -1,11 +1,11 @@
 <?php
 
-namespace Dmitriidigital\UnitPay\Test;
+namespace UnionTeams\UnitPay\Test;
 
 use Illuminate\Http\Request;
-use Dmitriidigital\UnitPay\Exceptions\InvalidPaidOrder;
-use Dmitriidigital\UnitPay\Exceptions\InvalidSearchOrder;
-use Dmitriidigital\UnitPay\Test\Fake\Order;
+use UnionTeams\UnitPay\Exceptions\InvalidPaidOrder;
+use UnionTeams\UnitPay\Exceptions\InvalidSearchOrder;
+use UnionTeams\UnitPay\Test\Fake\Order;
 
 class UnitPayTest extends TestCase
 {

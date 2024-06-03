@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmitriidigital\UnitPay;
+namespace UnionTeams\UnitPay;
 
 use Illuminate\Support\ServiceProvider;
 

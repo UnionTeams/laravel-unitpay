@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmitriidigital\UnitPay\Facades;
+namespace UnionTeams\UnitPay\Facades;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Facade;
