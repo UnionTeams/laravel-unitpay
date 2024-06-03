@@ -82,20 +82,6 @@ class UnitPay
     }
 
     /**
-     * @param string $ip
-     * @return bool
-     */
-    public function allowIP($ip)
-    {
-        // Allow local ip
-        if ($ip == '127.0.0.1') {
-            return true;
-        }
-
-        return in_array($ip, config('unitpay.allowed_ips'));
-    }
-
-    /**
      * @param $account
      * @param $currency
      * @param $desc
