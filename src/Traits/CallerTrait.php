@@ -1,11 +1,11 @@
 <?php
 
-namespace Dmitriidigital\UnitPay\Traits;
+namespace UnionTeams\UnitPay\Traits;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use Dmitriidigital\UnitPay\Exceptions\InvalidPaidOrder;
-use Dmitriidigital\UnitPay\Exceptions\InvalidSearchOrder;
+use UnionTeams\UnitPay\Exceptions\InvalidPaidOrder;
+use UnionTeams\UnitPay\Exceptions\InvalidSearchOrder;
 
 trait CallerTrait
 {

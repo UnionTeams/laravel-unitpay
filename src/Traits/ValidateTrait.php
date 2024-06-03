@@ -1,6 +1,6 @@
 <?php
 
-namespace Dmitriidigital\UnitPay\Traits;
+namespace UnionTeams\UnitPay\Traits;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
