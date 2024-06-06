@@ -30,7 +30,7 @@ class UnitPay
      * @param null $currency
      * @return string
      */
-    public function getPayUrl($amount, $order_id, $email, $desc = null, $currency = null, $locale = null)
+    public function getPayUrl($amount, $order_id, $email, $desc = null, $currency = null, $locale = null,)
     {
         // Array of url query
         $query = [];
@@ -57,6 +57,8 @@ class UnitPay
         if (! is_null($desc)) {
             $query['desc'] = $desc;
         }
+
+        $query['cashItems'] = base64_encode(json_encode([["name" => $desc, "count" => 1, "price" => $amount, "type" => "payment"]]));
 
         // Payment currency
         $query['currency'] = is_null($currency) ? config('unitpay.currency') : $currency;
